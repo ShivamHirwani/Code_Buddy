@@ -118,9 +118,9 @@ function ChatView() {
                   className="rounded-full"
                 />
               )}
-              <ReactMarkdown className="flex flex-col">
-                {msg?.content}
-              </ReactMarkdown>
+              <div className="flex flex-col">
+                <ReactMarkdown>{msg?.content}</ReactMarkdown>
+              </div>
             </div>
           ))}
         {loading && (
