@@ -109,7 +109,7 @@ function ChatView() {
                 backgroundColor: Colors.CHAT_BACKGROUND,
               }}
             >
-              {msg?.role == "user" && (
+              {/* {msg?.role == "user" && (
                 <Image
                   src={userDetail?.picture}
                   alt="userImage"
@@ -117,7 +117,17 @@ function ChatView() {
                   height={35}
                   className="rounded-full"
                 />
-              )}
+              )} */}
+
+              {/* v2 */}
+              {userDetail?.picture ? (
+                <Image
+                  src={userDetail.picture}
+                  alt="Profile picture"
+                  width={40}
+                  height={40}
+                />
+              ) : null}
               <div className="flex flex-col">
                 <ReactMarkdown>{msg?.content}</ReactMarkdown>
               </div>

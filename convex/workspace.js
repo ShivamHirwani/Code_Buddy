@@ -55,12 +55,10 @@ export const GetAllWorkspace = query({
   args: {
     userId: v.id("users"),
   },
-  handler: async (ctx, args) => {
-    const result = await ctx.db
-      .query("workspace")
-      .filter((q) => q.eq(q.field("user"), args.userId))
-      .collect();
-
-    return result;
+  handler: (ctx, args) => {
+    return ctx.db.insert("workspace", {
+      messages: args.messages,
+      user: args.user,
+    });
   },
 });

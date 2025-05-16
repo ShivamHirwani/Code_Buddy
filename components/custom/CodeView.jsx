@@ -102,13 +102,13 @@ function CodeView() {
         <div className="flex items-center flex-wrap shrink-0 bg-black p-1 w-[140px] gap-3 justify-center rounded-full">
           <h2
             onClick={() => setActiveTab("code")}
-            className={`text-sm cursor-pointer ${activeTab == "code" && "text-blue-500 bg-blue-500 bg-opacity-25 p-1 px-2  rounded-full"} `}
+            className={`text-sm cursor-pointer ${activeTab == "code" && "text-blue-700 bg-blue-400 bg-opacity-25 p-1 px-2  rounded-full"} `}
           >
             Code
           </h2>
           <h2
             onClick={() => setActiveTab("preview")}
-            className={`text-sm cursor-pointer ${activeTab == "preview" && "text-blue-500 bg-blue-500 bg-opacity-25 p-1 px-2  rounded-full"} `}
+            className={`text-sm cursor-pointer ${activeTab == "preview" && "text-blue-700 bg-blue-400 bg-opacity-25 p-1 px-2  rounded-full"} `}
           >
             Preview
           </h2>
